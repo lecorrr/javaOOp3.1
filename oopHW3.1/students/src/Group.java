@@ -50,7 +50,7 @@ public class Group {
 
     public Student searchStudentByLastName(String lastName) throws StudentNotFoundException{
         for(int i = 0; i < this.students.length; i++){
-            if(students[i].getLastName().equals(lastName)){
+            if((students[i] != null) && (students[i].getLastName().equals(lastName))){
                 return students[i];
             }
         }
